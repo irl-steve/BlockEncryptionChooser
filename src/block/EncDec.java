@@ -61,60 +61,39 @@ public class EncDec {
 
 	    String mode = "ECB";
 	    String pad = "NoPadding";
-//	    if (alg == "RSA"){
-//	      do {
-//	        isInvalid = false;
-//	        System.out.println("Please enter your choice of padding \n 1. PKCS1 \n 2.OAEPWithSHA-1AndMGF1 \n 3. OAEPWithSHA-256AndMGF1 \n");
-//	        int modeChoice = scan.nextInt();
-//	        switch(modeChoice){
-//	          case 1:
-//	            pad = "PKCS1Padding";
-//	            break;
-//	          case 2:  
-//	            pad = "OAEPWithSHA-1AndMGF1Padding";
-//	            break;
-//	          case 3:  
-//	            pad = "OAEPWithSHA-256AndMGF1Padding";
-//	            break;
-//	          default: 
-//	            System.out.println("Please enter a valid choice");
-//	            isInvalid = true;
-//	        }
-//	      } while (isInvalid);
-//	    } else {
-	      do {
-	        isInvalid = false;
-	        System.out.println("Please enter your choice of mode \n 1. CBC \n 2.ECB \n");
-	        int modeChoice = scan.nextInt();
-	        switch(modeChoice){
-	          case 1:
-	            mode = "CBC";
-	            break;
-	          case 2:  
-	            mode = "ECB";
-	            break;
-	          default: 
-	            System.out.println("Please enter a valid choice");
-	            isInvalid = true;
-	        }
-	      } while (isInvalid);
+	    do {
+	      isInvalid = false;
+	      System.out.println("Please enter your choice of mode \n 1. CBC \n 2.ECB \n");
+	      int modeChoice = scan.nextInt();
+	      switch(modeChoice){
+	        case 1:
+	          mode = "CBC";
+	          break;
+	        case 2:  
+	          mode = "ECB";
+	          break;
+	        default: 
+	          System.out.println("Please enter a valid choice");
+	          isInvalid = true;
+	      }
+	    } while (isInvalid);
 
-	      do {
-	        isInvalid = false;
-	        System.out.println("Please enter your choice of padding\n 1. NoPadding\n 2. PKCS5Padding\n");
-	        int padChoice = scan.nextInt();
-	        switch(padChoice){
-	          case 1:
-	            pad = "NoPadding";
-	            break;
-	          case 2:  
-	            pad = "PKCS5Padding";
-	            break;
-	          default: 
-	            System.out.println("Please enter a valid choice");
-	            isInvalid = true;
-	        }
-	      } while (isInvalid);
+	    do {
+	      isInvalid = false;
+	      System.out.println("Please enter your choice of padding\n 1. NoPadding\n 2. PKCS5Padding\n");
+	      int padChoice = scan.nextInt();
+	      switch(padChoice){
+	        case 1:
+	          pad = "NoPadding";
+	          break;
+	        case 2:  
+	          pad = "PKCS5Padding";
+	          break;
+	        default: 
+	          System.out.println("Please enter a valid choice");
+	          isInvalid = true;
+	      }
+	    } while (isInvalid);
 	    
 
 	    String cipherChoice = alg + "/" + mode + "/" + pad;
